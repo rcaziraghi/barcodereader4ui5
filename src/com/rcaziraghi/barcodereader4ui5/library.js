@@ -18,12 +18,12 @@ sap.ui.define([
 		dependencies: [ // keep in sync with the ui5.yaml and .library files
 			"sap.ui.core"
 		],
-		types: [
-			"com.rcaziraghi.barcodereader4ui5.ExampleColor"
-		],
+		// types: [
+		// 	"com.rcaziraghi.barcodereader4ui5."
+		// ],
 		interfaces: [],
 		controls: [
-			"com.rcaziraghi.barcodereader4ui5.Example"
+			"com.rcaziraghi.barcodereader4ui5.barcodereader4ui5"
 		],
 		elements: [],
 		noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
