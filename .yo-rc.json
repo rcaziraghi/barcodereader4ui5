@@ -1,0 +1,16 @@
+{
+  "generator-ui5-library": {
+    "libraryname": "barcodereader4ui5",
+    "namespace": "com.rcaziraghi",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.86.3",
+    "author": "rcaziraghi",
+    "newdir": true,
+    "namespaceURI": "com/rcaziraghi",
+    "librarynamespace": "com.rcaziraghi.barcodereader4ui5",
+    "librarynamespaceURI": "com/rcaziraghi/barcodereader4ui5",
+    "librarybasepath": "../../../",
+    "frameworklowercase": "openui5",
+    "setupCompleted": true
+  }
+}
