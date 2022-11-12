@@ -1,20 +1,17 @@
 sap.ui.define([
     "sap/ui/core/Control",
     "./quagga/quagga.min",
-    //"./models",
     "sap/m/Button",
     "sap/m/Dialog",
     "sap/m/Input",
     "sap/m/FlexBox",
-    "sap/m/FlexAlignItems",
-    "sap/m/FlexJustifyContent",
     "sap/m/FlexItemData",
     "sap/ui/core/HTML",
     'sap/ui/core/Core'
-], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexAlignItems, FlexJustifyContent, FlexItemData, coreHTML, Core) {
+], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexItemData, coreHTML, Core) {
     "use strict"; 
 
-    let oResourceBundle = Core.getLibraryResourceBundle("sap.ui.core");
+    let oResourceBundle = Core.getLibraryResourceBundle("com.rcaziraghi.barcodereader4ui5");
 
     let DEFAULT_CLOSE = oResourceBundle.getText("DEFAULT_CLOSE"),
         BARCODE_TITLE = oResourceBundle.getText("BARCODE_TITLE"),
@@ -23,7 +20,7 @@ sap.ui.define([
         BARCODE_OPEN_DIALOG_TEXT = oResourceBundle.getText("BARCODE_OPEN_DIALOG_TEXT")
         ;
 
-    return Control.extend("barcodereader4ui5", {
+    return Control.extend("com.rcaziraghi.barcodereader4ui5", {
         metadata: {
 
             properties: {
@@ -161,8 +158,8 @@ sap.ui.define([
 
                 this._oFlexBoxContainer = new FlexBox( "FlexboxExternalBarCodeScanner",
                     {
-                        justifyContent: FlexJustifyContent.Center,
-                        alignItems: FlexAlignItems.Center,
+                        justifyContent: sap.m.FlexJustifyContent.Center,
+                        alignItems: sap.m.FlexAlignItems.Center,
                         fitContainer: true,
                         width: '100%'
                     }
@@ -206,7 +203,7 @@ sap.ui.define([
 
         init: function (oEvent) {
             this._createExternalControls();
-            Models.getText("DEFAULT_CLOSE");
+            oResourceBundle.getText("DEFAULT_CLOSE");
         },
 
         renderer: function (oRM, oControl) {
