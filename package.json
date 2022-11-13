@@ -1,6 +1,6 @@
 {
   "name": "@rcaziraghi/barcodereader4ui5",
-  "version": "1.1.0",
+  "version": "1.4.6",
   "description": "Barcode Reader for UI5",
   "author": "rcaziraghi",
   "license": "MIT",
@@ -10,13 +10,7 @@
     "karma": "^6.1.1",
     "karma-chrome-launcher": "^3.1.0",
     "karma-cli": "^2.0.0",
-    "karma-ui5": "^2.3.3",
-    "ui5-middleware-livereload": "^0.5.1"
-  },
-  "ui5": {
-    "dependencies": [
-      "ui5-middleware-livereload"
-    ]
+    "karma-ui5": "^2.3.3"
   },
   "scripts": {
     "build": "ui5 build --clean-dest",
