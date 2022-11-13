@@ -1,7 +1,7 @@
-# ui5BarCodeReader
+# BarcodeReader4UI5
 
-UI5BarCodeReader is a neat package powered by Quagga.js to add a input with barcode reading capabilities.  
-UI5BarCodeReader é um pacote impulsionado por Quagga.js para adicionar um input com capacidade para leitura de código de barras.  
+BarcodeReader4UI5 is a neat package powered by Quagga.js to add a input with barcode reading capabilities.  
+BarcodeReader4UI5 é um pacote impulsionado por Quagga.js para adicionar um input com capacidade para leitura de código de barras.  
 
 ![](screenshot.gif)
 
