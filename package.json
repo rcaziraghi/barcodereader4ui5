@@ -20,7 +20,7 @@
   },
   "scripts": {
     "build": "ui5 build --clean-dest",
-    "start": "ui5 serve --open test-resources/com/rcaziraghi/barcodereader4ui5/Example.html",
+    "start": "ui5 serve --open test-resources/com/rcaziraghi/barcodereader4ui5/barcodereader4ui5.html",
     "testsuite": "ui5 serve --open test-resources/com/rcaziraghi/barcodereader4ui5/qunit/testsuite.qunit.html",
     "test": "karma start --browsers=ChromeHeadless --singleRun=true"
   }

@@ -23,10 +23,10 @@ sap.ui.define(function() {
 			module: "./{name}.qunit"
 		},
 		tests: {
-			// test file for the Example control
-			Example: {
-				title: "QUnit Test for Example",
-				_alternativeTitle: "QUnit tests: com.rcaziraghi.barcodereader4ui5.Example"
+			// test file for the barcodereader4ui5 control
+			barcodereader4ui5: {
+				title: "QUnit Test for barcodereader4ui5",
+				_alternativeTitle: "QUnit tests: com.rcaziraghi.barcodereader4ui5.barcodereader4ui5"
 			}
 		}
 	};

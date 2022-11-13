@@ -156,8 +156,7 @@ sap.ui.define([
 
             if(!this._oFlexBoxContainer) {
 
-                this._oFlexBoxContainer = new FlexBox( "FlexboxExternalBarCodeScanner",
-                    {
+                this._oFlexBoxContainer = new FlexBox({
                         justifyContent: sap.m.FlexJustifyContent.Center,
                         alignItems: sap.m.FlexAlignItems.Center,
                         fitContainer: true,
@@ -169,7 +168,7 @@ sap.ui.define([
 
             if(!this.oOpenDialogButton) {
 
-                this.oOpenDialogButton = new Button('OpenDialogButton',
+                this.oOpenDialogButton = new Button(
                     {
                         text: this.getShowDialogText() ? this.getOpenDialogText() : null,
                         icon: this.getOpenDialogIcon(),
@@ -182,7 +181,7 @@ sap.ui.define([
             
             if(!this.oInput) {
 
-                this.oInput = new Input('Input',
+                this.oInput = new Input(
                     {
                         placeholder: this.getOpenDialogText(),
                         submit: this._onInputSubmit.bind(this),

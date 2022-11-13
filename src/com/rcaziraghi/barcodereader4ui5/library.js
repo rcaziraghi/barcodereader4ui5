@@ -41,12 +41,12 @@ sap.ui.define([
 	var thisLib = com.rcaziraghi.barcodereader4ui5;
 
 	/**
-	 * Semantic Colors of the <code>com.rcaziraghi.barcodereader4ui5.Example</code>.
+	 * Semantic Colors of the <code>com.rcaziraghi.barcodereader4ui5.barcodereader4ui5</code>.
 	 *
 	 * @enum {string}
 	 * @public
 	 */
-	thisLib.ExampleColor = {
+	thisLib.barcodereader4ui5Color = {
 
 		/**
 		 * Default color (brand color)
