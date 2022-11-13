@@ -1,25 +1,25 @@
 # ui5BarCodeReader
 
-UI5BarCodeReader is a neat package powered by Quagga.js to add a input with barcode reading capabilities.
+UI5BarCodeReader is a neat package powered by Quagga.js to add a input with barcode reading capabilities.  
 
-UI5BarCodeReader é um pacote impulsionado por Quagga.js para adicionar um input com capacidade para leitura de código de barras.
+UI5BarCodeReader é um pacote impulsionado por Quagga.js para adicionar um input com capacidade para leitura de código de barras.  
 
 ![](screenshot.gif)
 
-*Por favor observe que o pacote ainda não funciona em ambientes com Launchpad, somente em apps standalone.
-*Please note that the package does not work yet with Launchpad environments, only on standalone apps.
+*Por favor observe que o pacote ainda não funciona em ambientes com Launchpad, somente em apps standalone.  
+*Please note that the package does not work yet with Launchpad environments, only on standalone apps.  
 
 ## Installation/Instalação
 
-Instale no seu projeto Node.js:
-Install at your Node.js project:
+Instale no seu projeto Node.js:  
+Install at your Node.js project:  
 
 ```
 $ npm install @rcaziraghi/barcodereader4ui5 --save-dev
 ```
 
-Garanta que o pacote está nas dependências ui5 (dentro do package.json):
-Make sure that the package is in the ui5 dependencies (inside package.json):
+Garanta que o pacote está nas dependências ui5 (dentro do package.json):  
+Make sure that the package is in the ui5 dependencies (inside package.json):  
 
 ```
 "ui5": {
@@ -29,8 +29,8 @@ Make sure that the package is in the ui5 dependencies (inside package.json):
 	},
 ```
 
-Insira o resource no seu manifest.json (dentro da tag "sap.ui5"):
-Insert the resource in your manifest.json file (inside tag "sap.ui5"):
+Insira o resource no seu manifest.json (dentro da tag "sap.ui5"):  
+Insert the resource in your manifest.json file (inside tag "sap.ui5"):  
 
 ```
 		"resourceRoots": {
@@ -40,8 +40,8 @@ Insert the resource in your manifest.json file (inside tag "sap.ui5"):
 
 ## Usage/Uso
 
-Add namespace in view.xml
-Adicione o namespace à sua view.xml
+Add namespace in view.xml  
+Adicione o namespace à sua view.xml  
 ```xml
 <mvc:View
 ...
@@ -50,8 +50,8 @@ Adicione o namespace à sua view.xml
 >
 ```
 
-Add control in view.xml
-Adicione o control ao view.xml
+Add control in view.xml  
+Adicione o control ao view.xml  
 ```xml
 ...
 <barcodereader4ui5:barcodereader4ui5  id="barCodeReader"
