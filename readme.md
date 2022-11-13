@@ -32,9 +32,9 @@ Insert the resource in your manifest.json file (inside tag "sap.ui5"):
 Insira o resource no seu manifest.json (dentro da tag "sap.ui5"):  
 
 ```
-		"resourceRoots": {
-            ".com.rcaziraghi": "./../node_modules/@rcaziraghi"
-        }
+		"resourceRoots": {  
+            ".com.rcaziraghi": "./../node_modules/@rcaziraghi"  
+            }
 ```
 
 ## Usage/Uso
