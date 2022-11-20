@@ -1,0 +1,10 @@
+# exclude development artifacts
+node_modules/
+.idea
+.editorconfig
+.eslintrc
+.vscode/
+
+# only for testing, these resources should not be delivered
+test/
+dist/test-resources/ui5lab/browser/

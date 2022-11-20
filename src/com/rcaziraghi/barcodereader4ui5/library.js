@@ -18,15 +18,13 @@ sap.ui.define([
 		dependencies: [ // keep in sync with the ui5.yaml and .library files
 			"sap.ui.core"
 		],
-		// types: [
-		// 	"com.rcaziraghi.barcodereader4ui5."
-		// ],
+		types: [],
 		interfaces: [],
 		controls: [
 			"com.rcaziraghi.barcodereader4ui5.barcodereader4ui5"
 		],
 		elements: [],
-		noLibraryCSS: false // if no CSS is provided, you can disable the library.css load here
+		noLibraryCSS: true // if no CSS is provided, you can disable the library.css load here
 	});
 
 	/**

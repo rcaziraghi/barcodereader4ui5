@@ -38,27 +38,26 @@ sap.ui.define([
 	QUnit.test("Test get properties", function(assert) {
 		assert.expect(1);
 		var obarcodereader4ui5 = new barcodereader4ui5({
+			id: "testgetproperties",
 			value: "barcodereader4ui5"
 		});
-		assert.equal(obarcodereader4ui5.getValue(), "barcodereader4ui5", "Check text equals 'barcodereader4ui5'");
-		//assert.equal(obarcodereader4ui5.getColor(), barcodereader4ui5Color.Default, "Check color equals 'Default'");
-	});
+		assert.equal(obarcodereader4ui5.getValue(), "barcodereader4ui5", "Check text equals 'barcodereader4ui5'");	});
 
-	// some basic eventing check
-	// QUnit.test("Test click event", function(assert) {
-	// 	assert.expect(1);
-	// 	var obarcodereader4ui5 = new barcodereader4ui5("barcodereader4ui5", {
-	// 		value: "barcodereader4ui5",
-	// 		openDialog: function() {
-	// 			assert.ok(true, "Event has been fired!")
-	// 		}
-	// 	}).placeAt("uiArea1");
-	// 	return new Promise(function(resolve, reject) {
-	// 		setTimeout(function() {
-	// 			qutils.triggerMouseEvent("barcodereader4ui5", "click", 1, 1);
-    //     		resolve();
-	// 		}, 1000);
-	// 	});
-	// });
+	// some basic control checks
+	QUnit.test("Test multiple controls", function(assert) {
+		assert.expect(2);
+		var obarcodereader4ui51 = new barcodereader4ui5({
+			id: "testmultiplecontrols1",
+			value: "barcodereader4ui51"
+		});
+
+		var obarcodereader4ui52 = new barcodereader4ui5({
+			id: "testmultiplecontrols2",
+			value: "barcodereader4ui52"
+		});
+
+		assert.equal(obarcodereader4ui51.getValue(), "barcodereader4ui51", "Check text equals 'barcodereader4ui51'");
+		assert.equal(obarcodereader4ui52.getValue(), "barcodereader4ui52", "Check text equals 'barcodereader4ui52'");
+	});
 
 });

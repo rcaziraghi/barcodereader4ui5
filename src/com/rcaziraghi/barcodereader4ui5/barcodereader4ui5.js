@@ -7,8 +7,9 @@ sap.ui.define([
     "sap/m/FlexBox",
     "sap/m/FlexItemData",
     "sap/ui/core/HTML",
-    'sap/ui/core/Core'
-], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexItemData, coreHTML, Core) {
+    'sap/ui/core/Core',
+    "sap/ui/core/HTML"
+], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexItemData, coreHTML, Core, HTML) {
     "use strict"; 
 
     let oResourceBundle = Core.getLibraryResourceBundle("com.rcaziraghi.barcodereader4ui5");
@@ -20,7 +21,9 @@ sap.ui.define([
         BARCODE_OPEN_DIALOG_TEXT = oResourceBundle.getText("BARCODE_OPEN_DIALOG_TEXT")
         ;
 
-    return Control.extend("com.rcaziraghi.barcodereader4ui5", {
+    var barcodereader4ui5Control = Control.extend("com.rcaziraghi.barcodereader4ui5", {
+
+        library: "com.caziraghi.barcodereader4ui5",
         metadata: {
 
             properties: {
@@ -49,7 +52,6 @@ sap.ui.define([
 
             },
             aggregations: {
-
             },
             events: {
                 submit: {
@@ -65,6 +67,24 @@ sap.ui.define([
             }
 
         },
+
+        init: function (oEvent) {
+            this._createExternalControls();
+            oResourceBundle.getText("DEFAULT_CLOSE");
+        },
+        
+        renderer: function (oRM, oControl) {
+            oRM.write("<div");
+            oRM.writeControlData(oControl);
+            oRM.writeClasses();
+            oRM.write(">");
+            oRM.renderControl(oControl._oFlexBoxContainer);
+            oRM.write("</div>");
+        },
+        
+        onAfterRendering: function() {
+
+		},
 
         setValue: function (sText) {
 
@@ -114,14 +134,16 @@ sap.ui.define([
 
 
             if (!this._oScanDialog) {
-                this._oCloseButton = new Button({
+                this._oCloseButton = new Button( this.getId() + "-CloseButton",
+                {
                     text: this.getCloseText(),
                     press: function (oEvent) {
                         this._oScanDialog.close();
                     }.bind(this)
                 });
 
-                this._oChangeCameraButton = new Button({
+                this._oChangeCameraButton = new Button( this.getId() + "-ChangeCameraButton",
+                {
                     text: this.getChangeCameraText(),
                     icon: this.getChangeCameraIcon(),
                     press: function (oEvent) {
@@ -129,11 +151,11 @@ sap.ui.define([
                     }.bind(this)
                 });
 
-                this._scanContainer = new coreHTML({ id: "reader", content: "<div />" });
+                this._scanContainer = new coreHTML({ id: this.getId() + "reader", content: "<div />" });
 
-                this._oScanDialog = new sap.m.Dialog({
+                this._oScanDialog = new sap.m.Dialog( this.getId() + "-ScanDialog",
+                {
                     title: this.getTitle(),
-
                     horizontalScrolling: false,
                     verticalScrolling: false,
                     stretchOnPhone: true,
@@ -156,7 +178,7 @@ sap.ui.define([
 
             if(!this._oFlexBoxContainer) {
 
-                this._oFlexBoxContainer = new FlexBox({
+                this._oFlexBoxContainer = new FlexBox( this.getId() + "-FlexBoxContainer", {
                         justifyContent: sap.m.FlexJustifyContent.Center,
                         alignItems: sap.m.FlexAlignItems.Center,
                         fitContainer: true,
@@ -168,7 +190,7 @@ sap.ui.define([
 
             if(!this.oOpenDialogButton) {
 
-                this.oOpenDialogButton = new Button(
+                this.oOpenDialogButton = new Button( this.getId() + "-OpenDialogButton",
                     {
                         text: this.getShowDialogText() ? this.getOpenDialogText() : null,
                         icon: this.getOpenDialogIcon(),
@@ -181,7 +203,7 @@ sap.ui.define([
             
             if(!this.oInput) {
 
-                this.oInput = new Input(
+                this.oInput = new Input( this.getId() + "-Input",
                     {
                         placeholder: this.getOpenDialogText(),
                         submit: this._onInputSubmit.bind(this),
@@ -198,20 +220,6 @@ sap.ui.define([
             this._oFlexBoxContainer.addItem(this.oInput);
             this._oFlexBoxContainer.addItem(this.oOpenDialogButton);
 
-        },
-
-        init: function (oEvent) {
-            this._createExternalControls();
-            oResourceBundle.getText("DEFAULT_CLOSE");
-        },
-
-        renderer: function (oRM, oControl) {
-            oRM.write("<div");
-            oRM.writeControlData(oControl);
-            oRM.writeClasses();
-            oRM.write(">");
-            oRM.renderControl(oControl._oFlexBoxContainer);
-            oRM.write("</div>");
         },
 
         getVideoDevices: function () {
@@ -271,7 +279,7 @@ sap.ui.define([
                     inputStream: {
                         name: "Live",
                         type: "LiveStream",
-                        target: document.querySelector('#reader'),
+                        target: document.querySelector('#' + this.getId() + 'reader'),
 
                         constraints: {
                             width: 1280,
@@ -377,4 +385,6 @@ sap.ui.define([
         }
 
     });
+
+    return barcodereader4ui5Control;
 });

@@ -5,7 +5,7 @@
 	<version>${version}</version>
 	<copyright>${copyright}</copyright>
 	<title>barcodereader4ui5</title>
-	<documentation>Some description about barcodereader4ui5</documentation>
+	<documentation>Custom control for barcode reader</documentation>
 	<dependencies>
 		<dependency>
 			<libraryName>sap.ui.core</libraryName>

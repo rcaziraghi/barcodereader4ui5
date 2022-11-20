@@ -9,9 +9,11 @@ sap.ui.define([
 
 	// create a new instance of the barcodereader4ui5 control and
 	// place it into the DOM element with the id "content"
+	var value;
 	new barcodereader4ui5({
-			text: "barcodereader4ui5"
-			//color: barcodereader4ui5Color.Highlight
+			id: 'teste',
+			closeOnDetect: true,
+			value: value
 	}).placeAt("content");
 
 });

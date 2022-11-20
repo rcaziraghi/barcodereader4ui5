@@ -1,10 +1,10 @@
 specVersion: '2.2'
 metadata:
-  name: "com.rcaziraghi.barcodereader4ui5"
+  name: "@rcaziraghi/barcodereader4ui5"
 type: library
 framework:
   name: OpenUI5
-  version: 1.86.3
+  version: 1.100.0
   libraries:
     - name: sap.ui.core
     - name: sap.m
@@ -15,15 +15,15 @@ specVersion: "2.6"
 kind: extension
 type: project-shim
 metadata:
-  name: thirdparty
+  name: com.rcaziraghi.barcodereader4ui5.thirdparty
 shims:
   configurations:
-    com.rcaziraghi.barcodereader4ui5:
+    barcodereader4ui5js:
       specVersion: "2.6"
-      type: module
+      type: library
       metadata:
-        name: com.rcaziraghi.barcodereader4ui5
+        name: barcodereader4ui5js
       resources:
         configuration:
           paths:
-            "/thirdparty/com/rcaziraghi/barcodereader4ui5": "./"
+            /thirdparty/com/rcaziraghi/barcodereader4ui5/thirdparty/: "dist/"
