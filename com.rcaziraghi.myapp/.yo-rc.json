@@ -1,0 +1,15 @@
+{
+  "generator-ui5-app": {
+    "application": "myapp",
+    "namespace": "com.rcaziraghi",
+    "framework": "OpenUI5",
+    "frameworkVersion": "1.108.0",
+    "author": "rcaziraghi",
+    "initrepo": false,
+    "tstypes": "@openui5/ts-types-esm",
+    "tstypesVersion": "1.108.0",
+    "appId": "com.rcaziraghi.myapp",
+    "appURI": "com/rcaziraghi/myapp",
+    "setupCompleted": true
+  }
+}

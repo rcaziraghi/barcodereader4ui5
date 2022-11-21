@@ -7,9 +7,8 @@ sap.ui.define([
     "sap/m/FlexBox",
     "sap/m/FlexItemData",
     "sap/ui/core/HTML",
-    'sap/ui/core/Core',
-    "sap/ui/core/HTML"
-], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexItemData, coreHTML, Core, HTML) {
+    'sap/ui/core/Core'
+], function (Control, QuaggaJS, Button, Dialog, Input, FlexBox, FlexItemData, coreHTML, Core) {
     "use strict"; 
 
     let oResourceBundle = Core.getLibraryResourceBundle("com.rcaziraghi.barcodereader4ui5");

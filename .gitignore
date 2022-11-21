@@ -1,5 +1,7 @@
 node_modules/
+com.rcaziraghi.myapp/node_modules/
 package-lock.json
 .env
 .vscode/
 dist/
+.editorconfig

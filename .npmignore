@@ -8,3 +8,4 @@ node_modules/
 # only for testing, these resources should not be delivered
 test/
 dist/test-resources/ui5lab/browser/
+com.rcaziraghi.myapp/
